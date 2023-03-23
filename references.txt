@@ -1,0 +1,20 @@
+https://dockertraining.readthedocs.io/en/latest/nodejs/angularjs-mongodb.html
+https://www.mongodb.com/docs/v4.4/mongo/
+
+mongo "mongodb://localhost:27017/realestate"
+
+use realestate
+
+show collections
+
+
+--git
+git archive master | gzip > /home/manish/projects/dokr-ng-node-mongo.tgz
+cd /home/manish/projects/
+
+gunzip -c dokr-ng-node-mongo.tgz | tar xvf -
+
+
+-- docker
+sudo docker build -t realestate-angular ./
+sudo docker-compose up -d
